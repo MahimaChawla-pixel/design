@@ -23,6 +23,15 @@ const LeftSidebar = () => {
         <LeftSideChips imageUrl="/chats.svg" Text="Chats & Tags" />
         <LeftSideChips imageUrl="/chats.svg" Text="Custom" />
       </div>
+
+ 
+
+
+
+
+
+
+
     </div>
   );
 };

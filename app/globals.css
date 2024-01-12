@@ -25,3 +25,13 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.btn.active {
+  background-color:#333; 
+  color: #ffff; 
+  border-color: #ccc; 
+}
+.managebtn.active {
+  background-color:#8B5CF6 ;
+  color: #ffff; 
+  border-color: #ccc; 
+}

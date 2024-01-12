@@ -1,20 +1,43 @@
+"use client";
+import React, { useState } from "react";
 import OfferBox from "@/components/OfferBox";
-import React from "react";
 
 const ManageOffer = () => {
+  const [activeButton, setActiveButton] = useState(null);
+  const handleButtonClick = (index) => {
+    setActiveButton(index);
+  };
   return (
     <div className="w-1/2">
-      <div className="flex items-center mb-2">
-        <button className="w-56 h-14 mx-2 py-2 px-4 rounded focus:outline-none border border-stone-300 bg-white text-slate-800">
-          Package<span>(3)</span>
-        </button>
-        <button className="w-56 h-14 mx-2 py-2 px-4 rounded focus:outline-none border border-stone-300 bg-white text-slate-800">
-          Pricing<span>(3)</span>
-        </button>
-        <button className="w-56 h-14 mx-2 py-2 px-4 rounded focus:outline-none border border-stone-300 bg-white text-slate-800">
-          Offers<span>(3)</span>
-        </button>
+      <div className="mb-4">
+        <div className="flex items-center justify-between">
+          <div
+            className={`w-[232px] managebtn flex items-center justify-center  h-14 py-2 px-4 rounded focus:outline-none border border-stone-300 bg-white text-slate-800 ${
+              activeButton === 0 ? "active" : ""
+            }`}
+            onClick={() => handleButtonClick(0)}
+          >
+            Package<span>(3)</span>
+          </div>
+          <div
+            className={`w-[232px] managebtn flex items-center justify-center  h-14 py-2 px-4 rounded focus:outline-none border border-stone-300 bg-white text-slate-800 ${
+              activeButton === 1 ? "active" : ""
+            }`}
+            onClick={() => handleButtonClick(1)}
+          >
+            Pricing<span>(3)</span>
+          </div>
+          <div
+            className={`w-[232px] managebtn flex items-center justify-center h-14 py-2 px-4 rounded focus:outline-none border border-stone-300 bg-white text-slate-800 ${
+              activeButton === 2 ? "active" : ""
+            }`}
+            onClick={() => handleButtonClick(2)}
+          >
+            Offers<span>(3)</span>
+          </div>
+        </div>
       </div>
+
       <div className="mb-2">
         <input
           className="h-14 border border-stone-300 rounded w-full py-2 px-3 text-slate-800 leading-tight focus:outline-none"
@@ -22,7 +45,7 @@ const ManageOffer = () => {
           placeholder="Search for Offers"
         />
       </div>
-      <div>
+      <div className="max-h-[600px] overflow-auto">
         <OfferBox
           imageUrl="/iphone.png"
           offerHeading="win iphone 11 pro"
@@ -38,12 +61,12 @@ const ManageOffer = () => {
           offerHeading="win iphone 11 pro"
           offerDesc="You’ve got an Iphone 11 Pro with our membership. Make your payment now to avail the offer."
         />
-           <OfferBox
+        <OfferBox
           imageUrl="/iphone.png"
           offerHeading="win iphone 11 pro"
           offerDesc="You’ve got an Iphone 11 Pro with our membership. Make your payment now to avail the offer."
         />
-           <OfferBox
+        <OfferBox
           imageUrl="/iphone.png"
           offerHeading="win iphone 11 pro"
           offerDesc="You’ve got an Iphone 11 Pro with our membership. Make your payment now to avail the offer."

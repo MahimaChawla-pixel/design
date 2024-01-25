@@ -18,7 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background: #f4f4f4;
 }
 .btn.active {
   background-color: #333;
@@ -87,7 +87,7 @@ body {
 
 .menu > div > a:target {
   color: #2a2a2a;
-  background-color: #fdfff4;
+  background-color: #f4f4f4;
 }
 
 .menu > div > a:target > span {
@@ -113,9 +113,9 @@ body {
 }
 
 .menu > div > a:target::after {
-  box-shadow: 0 25px 0 0 #fdfff4;
+  box-shadow: 0 25px 0 0 #f4f4f4;
 }
 
 .menu > div > a:target::before {
-  box-shadow: 0 -25px 0 0 #fdfff4;
+  box-shadow: 0 -25px 0 0 #f4f4f4;
 }

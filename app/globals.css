@@ -18,24 +18,18 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 .btn.active {
-  background-color:#333; 
-  color: #ffff; 
-  border-color: #ccc; 
+  background-color: #333;
+  color: #ffff;
+  border-color: #ccc;
 }
 .managebtn.active {
-  background-color:#8B5CF6 ;
-  color: #ffff; 
-  border-color: #ccc; 
+  background-color: #8b5cf6;
+  color: #ffff;
+  border-color: #ccc;
 }
-
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
@@ -44,16 +38,84 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 2px grey; 
+  box-shadow: inset 0 0 2px grey;
   border-radius: 10px;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background:#A1A1A1;
+  background: #a1a1a1;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #A1A1A1;
+  background: #a1a1a1;
+}
+
+.menu {
+  width: 300px;
+  padding-left: 50px;
+  background: linear-gradient(91deg, #6729ff 0%, #7b0ff5 100%);
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+}
+
+.menu > div > a {
+  position: relative;
+  top: 20px;
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  float: right;
+  border-radius: 25px 0 0 25px;
+  margin-top: 20px;
+  padding-right: 50px;
+  line-height: 50px;
+  transition: color 0.5s;
+  color: #fdfff4;
+}
+
+.menu > div > a > span {
+  border: 1px rgba(255, 255, 255, 0.35) solid;
+  display: block;
+  border-radius: 25px;
+}
+
+.menu > div > a:target {
+  color: #2a2a2a;
+  background-color: #fdfff4;
+}
+
+.menu > div > a:target > span {
+  border: none;
+}
+
+.menu > div > a::after,
+.menu > div > a::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 0 0 25px 0;
+  z-index: -1;
+}
+
+.menu > div > a::before {
+  top: auto;
+  bottom: -50px;
+  border-radius: 0 25px 0 0;
+}
+
+.menu > div > a:target::after {
+  box-shadow: 0 25px 0 0 #fdfff4;
+}
+
+.menu > div > a:target::before {
+  box-shadow: 0 -25px 0 0 #fdfff4;
 }

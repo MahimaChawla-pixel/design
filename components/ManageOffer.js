@@ -9,10 +9,10 @@ const ManageOffer = () => {
   };
   return (
     <div className="w-1/2">
-      <div className="mb-4">
-        <div className="flex items-center justify-between">
+      <div className="mb-4 w-full">
+        <div className="flex items-center w-full">
           <div
-            className={`w-[232px] managebtn flex items-center justify-center  h-14 py-2 px-4 rounded focus:outline-none border border-stone-300 bg-white text-slate-800 ${
+            className={` w-full managebtn flex items-center justify-center  h-14 py-2 px-4 rounded focus:outline-none border border-stone-300 bg-white text-slate-800 ${
               activeButton === 0 ? "active" : ""
             }`}
             onClick={() => handleButtonClick(0)}
@@ -20,7 +20,7 @@ const ManageOffer = () => {
             Package<span>(3)</span>
           </div>
           <div
-            className={`w-[232px] managebtn flex items-center justify-center  h-14 py-2 px-4 rounded focus:outline-none border border-stone-300 bg-white text-slate-800 ${
+            className={` w-full managebtn flex items-center justify-center  h-14 py-2 px-4 rounded focus:outline-none border border-stone-300 bg-white text-slate-800 ${
               activeButton === 1 ? "active" : ""
             }`}
             onClick={() => handleButtonClick(1)}
@@ -28,7 +28,7 @@ const ManageOffer = () => {
             Pricing<span>(3)</span>
           </div>
           <div
-            className={`w-[232px] managebtn flex items-center justify-center h-14 py-2 px-4 rounded focus:outline-none border border-stone-300 bg-white text-slate-800 ${
+            className={` w-full managebtn flex items-center justify-center h-14 py-2 px-4 rounded focus:outline-none border border-stone-300 bg-white text-slate-800 ${
               activeButton === 2 ? "active" : ""
             }`}
             onClick={() => handleButtonClick(2)}
@@ -45,7 +45,7 @@ const ManageOffer = () => {
           placeholder="Search for Offers"
         />
       </div>
-      <div className="max-h-[600px] overflow-auto">
+      <div className="max-h-[600px] overflow-auto w-full p-2">
         <OfferBox
           imageUrl="/iphone.png"
           offerHeading="win iphone 11 pro"
